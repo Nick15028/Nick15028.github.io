@@ -1,7 +1,21 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - My New Hugo Site</title>
+        <title>Tags - Tag - Nick Blog</title>
         <link>https://Nick15028.github.io/tags/</link>
-        <description>Tags - Tag - My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://Nick15028.github.io/tags/" rel="self" type="application/rss+xml" /></channel>
+        <description>Tags - Tag - Nick Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Sep 2020 23:59:25 &#43;0800</lastBuildDate><atom:link href="https://Nick15028.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>GIDLE</title>
+    <link>https://Nick15028.github.io/tags/gidle/</link>
+    <pubDate>Mon, 28 Sep 2020 23:59:25 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://Nick15028.github.io/tags/gidle/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Notes</title>
+    <link>https://Nick15028.github.io/tags/notes/</link>
+    <pubDate>Mon, 28 Sep 2020 23:59:25 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://Nick15028.github.io/tags/notes/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>

@@ -1,0 +1,14 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>GIDLE - Tag - Nick Blog</title>
+        <link>https://Nick15028.github.io/tags/gidle/</link>
+        <description>GIDLE - Tag - Nick Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 28 Sep 2020 23:59:25 &#43;0800</lastBuildDate><atom:link href="https://Nick15028.github.io/tags/gidle/" rel="self" type="application/rss+xml" /><item>
+    <title>My First Post</title>
+    <link>https://Nick15028.github.io/my-first-post/</link>
+    <pubDate>Mon, 28 Sep 2020 23:59:25 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://Nick15028.github.io/my-first-post/</guid>
+    <description><![CDATA[還在測試中~]]></description>
+</item></channel>
+</rss>
