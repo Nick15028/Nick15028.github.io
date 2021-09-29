@@ -3,12 +3,33 @@
         <title>Tags - Tag - Nick Blog</title>
         <link>https://Nick15028.github.io/tags/</link>
         <description>Tags - Tag - Nick Blog</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Mar 2021 23:59:25 &#43;0800</lastBuildDate><atom:link href="https://Nick15028.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 29 Sep 2021 20:55:53 &#43;0800</lastBuildDate><atom:link href="https://Nick15028.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>asm</title>
+    <link>https://Nick15028.github.io/tags/asm/</link>
+    <pubDate>Wed, 29 Sep 2021 20:55:53 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://Nick15028.github.io/tags/asm/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>masm6.15</title>
+    <link>https://Nick15028.github.io/tags/masm6.15/</link>
+    <pubDate>Wed, 29 Sep 2021 20:55:53 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://Nick15028.github.io/tags/masm6.15/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Notes</title>
     <link>https://Nick15028.github.io/tags/notes/</link>
-    <pubDate>Mon, 29 Mar 2021 23:59:25 &#43;0800</pubDate>
+    <pubDate>Wed, 29 Sep 2021 20:55:53 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://Nick15028.github.io/tags/notes/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>NTUST</title>
+    <link>https://Nick15028.github.io/tags/ntust/</link>
+    <pubDate>Wed, 29 Sep 2021 20:55:53 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://Nick15028.github.io/tags/ntust/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

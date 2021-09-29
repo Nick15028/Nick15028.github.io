@@ -1,11 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Nick Blog</title>
-        <link>https://Nick15028.github.io/</link>
-        <description>This is My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 29 Sep 2021 20:55:53 &#43;0800</lastBuildDate>
-            <atom:link href="https://Nick15028.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+        <title>masm6.15 - Tag - Nick Blog</title>
+        <link>https://Nick15028.github.io/tags/masm6.15/</link>
+        <description>masm6.15 - Tag - Nick Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Wed, 29 Sep 2021 20:55:53 &#43;0800</lastBuildDate><atom:link href="https://Nick15028.github.io/tags/masm6.15/" rel="self" type="application/rss+xml" /><item>
     <title>微算機概論實習-01</title>
     <link>https://Nick15028.github.io/microcomputerlab-01/</link>
     <pubDate>Wed, 29 Sep 2021 20:55:53 &#43;0800</pubDate>
@@ -14,15 +12,5 @@
     <description><![CDATA[1 組合語言(Assembly Language)是甚麼？  一種電腦語言 所有中高階語言(C、JAVA、BASIC&hellip;)之程式，都須經由 組合語言 轉變成執行檔  2 開發環境 硬體只需與80x86相容的機器都可以. 軟體 作業系統：DOS 組譯器：MASM6.15 連結器：使用MASM6.15內附的LINK&gt;EXE 文書處理器：附檔名為 *.asm  3 範例 印出一行文字印出 Hi, I learn assembly. Hello.exeHello.exe
 "Hello.exe
 .model small.datames	db	&#34;Hi, I learn assembly.$&#34;.stack.codemain procmov ax,@datamov ds,axmov dx,offset mesmov ah,09hint 21h	mov ax,4c00hint 21hmain endpend main4 作業 換行 印出自己的學號 使用特殊符號包圍住  lab1.]]></description>
-</item><item>
-    <title>尼克的第一篇博客</title>
-    <link>https://Nick15028.github.io/my-first-post/</link>
-    <pubDate>Mon, 29 Mar 2021 23:59:25 &#43;0800</pubDate>
-    <author>Author</author>
-    <guid>https://Nick15028.github.io/my-first-post/</guid>
-    <description><![CDATA[還在測試中~
-歐歐歐歐好港動！！！
-紀念一下終於把版面修好了ˊˇˋ
-從今天開始要認真更博客了(ง๑ •̀_•́)ง]]></description>
 </item></channel>
 </rss>

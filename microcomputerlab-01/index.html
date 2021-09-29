@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>微算機概論實習-01 - Nick Blog</title><meta name="Description" content="This is My New Hugo Site"><meta property="og:title" content="微算機概論實習-01" />
+<meta property="og:description" content="1 組合語言(Assembly Language)是甚麼？  一種電腦語言 所有中高階語言(C、JAVA、BASIC&hellip;)之程式，都須經由 組合語言 轉變成執行檔  2 開發環境 硬體只需與80x86相容的機器都可以. 軟體 作業系統：DOS 組譯器：MASM6.15 連結器：使用MASM6.15內附的LINK&gt;EXE 文書處理器：附檔名為 *.asm  3 範例 印出一行文字印出 Hi, I learn assembly. Hello.exeHello.exe
+&#34;Hello.exe
+.model small.datames	db	&#34;Hi, I learn assembly.$&#34;.stack.codemain procmov ax,@datamov ds,axmov dx,offset mesmov ah,09hint 21h	mov ax,4c00hint 21hmain endpend main4 作業 換行 印出自己的學號 使用特殊符號包圍住  lab1." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Nick15028.github.io/microcomputerlab-01/" />
+<meta property="og:image" content="https://Nick15028.github.io/logo.png"/>
+<meta property="article:published_time" content="2021-09-29T20:55:53+08:00" />
+<meta property="article:modified_time" content="2021-09-29T20:55:53+08:00" />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://Nick15028.github.io/logo.png"/>
+
+<meta name="twitter:title" content="微算機概論實習-01"/>
+<meta name="twitter:description" content="1 組合語言(Assembly Language)是甚麼？  一種電腦語言 所有中高階語言(C、JAVA、BASIC&hellip;)之程式，都須經由 組合語言 轉變成執行檔  2 開發環境 硬體只需與80x86相容的機器都可以. 軟體 作業系統：DOS 組譯器：MASM6.15 連結器：使用MASM6.15內附的LINK&gt;EXE 文書處理器：附檔名為 *.asm  3 範例 印出一行文字印出 Hi, I learn assembly. Hello.exeHello.exe
+&#34;Hello.exe
+.model small.datames	db	&#34;Hi, I learn assembly.$&#34;.stack.codemain procmov ax,@datamov ds,axmov dx,offset mesmov ah,09hint 21h	mov ax,4c00hint 21hmain endpend main4 作業 換行 印出自己的學號 使用特殊符號包圍住  lab1."/>
+<meta name="application-name" content="NICK">
+<meta name="apple-mobile-web-app-title" content="NICK"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Nick15028.github.io/microcomputerlab-01/" /><link rel="prev" href="https://Nick15028.github.io/my-first-post/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "微算機概論實習-01",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Nick15028.github.io\/microcomputerlab-01\/"
+        },"image": {
+                "@type": "ImageObject",
+                "url": "https:\/\/Nick15028.github.io\/cover.png",
+                "width":  800 ,
+                "height":  600 
+            },"genre": "posts","keywords": "Notes, NTUST, asm, masm6.15","wordcount":  120 ,
+        "url": "https:\/\/Nick15028.github.io\/microcomputerlab-01\/","datePublished": "2021-09-29T20:55:53+08:00","dateModified": "2021-09-29T20:55:53+08:00","publisher": {
+                "@type": "Organization",
+                "name": "xxxx",
+                "logo": {
+                "@type": "ImageObject",
+                "url": "https:\/\/Nick15028.github.io\/logo.png",
+                "width":  127 ,
+                "height":  40 
+                }
+            },"author": {
+                "@type": "Person",
+                "name": "Nick"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Nick Blog"><span class="header-title-pre">/</span>NICK</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Nick Blog"><span class="header-title-pre">/</span>NICK</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">微算機概論實習-01</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Nick</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%BE%AE%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96%E5%AF%A6%E7%BF%92/"><i class="far fa-folder fa-fw"></i>微算機概論實習</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-29">2021-09-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;120 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-assembly-language">1 組合語言(Assembly Language)是甚麼？</a></li>
+    <li><a href="#2-">2 開發環境</a></li>
+    <li><a href="#3-">3 範例</a></li>
+    <li><a href="#4-">4 作業</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="1-assembly-language">1 組合語言(Assembly Language)是甚麼？</h2>
+<ul>
+<li>一種電腦語言</li>
+<li>所有中高階語言(C、JAVA、BASIC&hellip;)之程式，都須經由 <strong>組合語言</strong> 轉變成執行檔</li>
+</ul>
+<h2 id="2-">2 開發環境</h2>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>硬體<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">只需與80x86相容的機器都可以.</div>
+        </div>
+    </div>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>軟體<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ul>
+<li>作業系統：DOS</li>
+<li>組譯器：MASM6.15</li>
+<li>連結器：使用MASM6.15內附的LINK&gt;EXE</li>
+<li>文書處理器：附檔名為 <code>*.asm</code></li>
+</ul></div>
+        </div>
+    </div>
+<h2 id="3-">3 範例</h2>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>印出一行文字<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">印出 Hi, I learn assembly.</div>
+        </div>
+    </div>
+<p><figure><a class="lightgallery" href="/2021-09-29-EX.jpg" title="Hello.exe" data-thumbnail="/2021-09-29-EX.jpg" data-sub-html="<h2>Hello.exe</h2><p>Hello.exe</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading/normal.min.svg"
+            data-src="/2021-09-29-EX.jpg"
+            data-srcset="/2021-09-29-EX.jpg, /2021-09-29-EX.jpg 1.5x, /2021-09-29-EX.jpg 2x"
+            data-sizes="auto"
+            alt="Hello.exe" />
+    </a><figcaption class="image-caption">Hello.exe</figcaption>
+    </figure></p>
+<div class="highlight"><pre class="chroma"><code class="language-nasm" data-lang="nasm"><span class="nf">.model</span> <span class="nv">small</span>
+<span class="nf">.data</span>
+<span class="nf">mes</span>	<span class="nv">db</span>	<span class="s">&#34;Hi, I learn assembly.$&#34;</span>
+
+<span class="nf">.stack</span>
+<span class="nf">.code</span>
+<span class="nf">main</span> <span class="nv">proc</span>
+	<span class="nf">mov</span> <span class="nb">ax</span><span class="p">,</span><span class="err">@</span><span class="nv">data</span>
+	<span class="nf">mov</span> <span class="nb">ds</span><span class="p">,</span><span class="nb">ax</span>
+
+	<span class="nf">mov</span> <span class="nb">dx</span><span class="p">,</span><span class="nv">offset</span> <span class="nv">mes</span>
+	<span class="nf">mov</span> <span class="nb">ah</span><span class="p">,</span><span class="mh">09h</span>
+	<span class="nf">int</span> <span class="mh">21h</span>		
+
+	<span class="nf">mov</span> <span class="nb">ax</span><span class="p">,</span><span class="mh">4c00h</span>
+	<span class="nf">int</span> <span class="mh">21h</span>
+<span class="nf">main</span> <span class="nv">endp</span>
+<span class="nf">end</span> <span class="nv">main</span>
+</code></pre></div><h2 id="4-">4 作業</h2>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>換行<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ol>
+<li>印出自己的學號</li>
+<li>使用特殊符號包圍住</li>
+</ol></div>
+        </div>
+    </div>
+<p><figure><a class="lightgallery" href="/2021-09-29-HW.jpg" title="lab1.exe" data-thumbnail="/2021-09-29-HW.jpg" data-sub-html="<h2>lab1.exe</h2><p>lab1.exe</p>">
+        <img
+            class="lazyload"
+            src="/svg/loading/normal.min.svg"
+            data-src="/2021-09-29-HW.jpg"
+            data-srcset="/2021-09-29-HW.jpg, /2021-09-29-HW.jpg 1.5x, /2021-09-29-HW.jpg 2x"
+            data-sizes="auto"
+            alt="lab1.exe" />
+    </a><figcaption class="image-caption">lab1.exe</figcaption>
+    </figure></p>
+<div class="highlight"><pre class="chroma"><code class="language-nasm" data-lang="nasm"><span class="nf">.model</span> <span class="nv">small</span>
+<span class="nf">.data</span>
+<span class="nf">mes1</span>	<span class="nv">db</span>	<span class="s">&#39;==================&#39;</span><span class="p">,</span><span class="mh">0ah</span><span class="p">,</span><span class="mh">0dh</span><span class="p">,</span><span class="s">&#39;$&#39;</span>
+<span class="nf">mes2</span>	<span class="nv">db</span>	<span class="s">&#39;My ID is M10911014&#39;</span><span class="p">,</span><span class="mh">0ah</span><span class="p">,</span><span class="mh">0dh</span><span class="p">,</span><span class="s">&#39;$&#39;</span>
+<span class="nf">mes3</span>	<span class="nv">db</span>	<span class="s">&#39;==================&#39;</span><span class="p">,</span><span class="mh">0ah</span><span class="p">,</span><span class="mh">0dh</span><span class="p">,</span><span class="s">&#39;$&#39;</span>
+
+<span class="nf">.stack</span>
+<span class="nf">.code</span>
+<span class="nf">main</span> <span class="nv">proc</span>
+	<span class="nf">mov</span> <span class="nb">ax</span><span class="p">,</span><span class="err">@</span><span class="nv">data</span>
+	<span class="nf">mov</span> <span class="nb">ds</span><span class="p">,</span><span class="nb">ax</span>
+
+	<span class="nf">mov</span> <span class="nb">dx</span><span class="p">,</span><span class="nv">offset</span> <span class="nv">mes1</span>
+	<span class="nf">mov</span> <span class="nb">ah</span><span class="p">,</span><span class="mh">09h</span>
+	<span class="nf">int</span> <span class="mh">21h</span>	
+	
+	<span class="nf">mov</span> <span class="nb">dx</span><span class="p">,</span><span class="nv">offset</span> <span class="nv">mes2</span>
+	<span class="nf">mov</span> <span class="nb">ah</span><span class="p">,</span><span class="mh">09h</span>
+	<span class="nf">int</span> <span class="mh">21h</span>	
+
+	<span class="nf">mov</span> <span class="nb">dx</span><span class="p">,</span><span class="nv">offset</span> <span class="nv">mes3</span>
+	<span class="nf">mov</span> <span class="nb">ah</span><span class="p">,</span><span class="mh">09h</span>
+	<span class="nf">int</span> <span class="mh">21h</span>	
+
+	<span class="nf">mov</span> <span class="nb">ax</span><span class="p">,</span><span class="mh">4c00h</span>
+	<span class="nf">int</span> <span class="mh">21h</span>
+<span class="nf">main</span> <span class="nv">endp</span>
+<span class="nf">end</span> <span class="nv">main</span>
+</code></pre></div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-09-29</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://Nick15028.github.io/microcomputerlab-01/" data-title="微算機概論實習-01" data-hashtags="Notes,NTUST,asm,masm6.15"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://Nick15028.github.io/microcomputerlab-01/" data-hashtag="Notes"><i class="fab fa-facebook-square fa-fw"></i></a><a href="javascript:void(0);" title="Share on WhatsApp" data-sharer="whatsapp" data-url="https://Nick15028.github.io/microcomputerlab-01/" data-title="微算機概論實習-01" data-web><i class="fab fa-whatsapp fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/notes/">Notes</a>,&nbsp;<a href="/tags/ntust/">NTUST</a>,&nbsp;<a href="/tags/asm/">asm</a>,&nbsp;<a href="/tags/masm6.15/">masm6.15</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/my-first-post/" class="prev" rel="prev" title="尼克的第一篇博客"><i class="fas fa-angle-left fa-fw"></i>尼克的第一篇博客</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.62.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.9"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2020 - 2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Nick</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
