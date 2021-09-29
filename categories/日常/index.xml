@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>日常 - Category - Nick Blog</title>
+        <link>https://Nick15028.github.io/categories/%E6%97%A5%E5%B8%B8/</link>
+        <description>日常 - Category - Nick Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 29 Mar 2021 23:59:25 &#43;0800</lastBuildDate><atom:link href="https://Nick15028.github.io/categories/%E6%97%A5%E5%B8%B8/" rel="self" type="application/rss+xml" /><item>
+    <title>尼克的第一篇博客</title>
+    <link>https://Nick15028.github.io/my-first-post/</link>
+    <pubDate>Mon, 29 Mar 2021 23:59:25 &#43;0800</pubDate>
+    <author>Author</author>
+    <guid>https://Nick15028.github.io/my-first-post/</guid>
+    <description><![CDATA[還在測試中~
+歐歐歐歐好港動！！！
+紀念一下終於把版面修好了ˊˇˋ
+從今天開始要認真更博客了(ง๑ •̀_•́)ง]]></description>
+</item></channel>
+</rss>
