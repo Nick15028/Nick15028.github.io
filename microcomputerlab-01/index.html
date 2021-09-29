@@ -6,7 +6,10 @@
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
         <title>微算機概論實習-01 - Nick Blog</title><meta name="Description" content="This is My New Hugo Site"><meta property="og:title" content="微算機概論實習-01" />
-<meta property="og:description" content="1 組合語言(Assembly Language)是甚麼？  一種電腦語言 所有中高階語言(C、JAVA、BASIC&hellip;)之程式，都須經由 組合語言 轉變成執行檔  2 開發環境 硬體只需與80x86相容的機器都可以. 軟體 作業系統：DOS 組譯器：MASM6.15 連結器：使用MASM6.15內附的LINK&gt;EXE 文書處理器：附檔名為 *.asm  3 範例 印出一行文字印出 Hi, I learn assembly. C:\Masm615&gt;TEST.EXEHi, I learn assembly..model small.datames	db	&#34;Hi, I learn assembly.$&#34;.stack.codemain procmov ax,@datamov ds,axmov dx,offset mesmov ah,09hint 21h	mov ax,4c00hint 21hmain endpend main4 作業 換行 印出自己的學號 使用特殊符號包圍住  C:\Masm615&gt;LAB1." />
+<meta property="og:description" content="1 組合語言(Assembly Language)是甚麼？  一種電腦語言 所有中高階語言(C、JAVA、BASIC&hellip;)之程式，都須經由 組合語言 轉變成執行檔  2 開發環境 硬體只需與80x86相容的機器都可以. 軟體 作業系統：DOS 組譯器：MASM6.15 連結器：使用MASM6.15內附的LINK&gt;EXE 文書處理器：附檔名為 *.asm  3 組義和連結方法 進行組譯
+C:\Masm615&gt;ml.Ta Hello.asm使用鏈結產生EXE檔
+C:\Masm615&gt;link Hello.obj最後開啟執行檔測試
+C:\Masm615&gt;HELLO.EXE4 範例 印出一行文字印出 Hi, I learn assembly. C:\Masm615&gt;TEST.EXEHi, I learn assembly..model small.datames	db	&#34;Hi, I learn assembly.$&#34;.stack.codemain procmov ax,@datamov ds,axmov dx,offset mesmov ah,09hint 21h	mov ax,4c00hint 21hmain endpend main5 作業 換行 印出自己的學號 使用特殊符號包圍住  C:\Masm615&gt;LAB1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://Nick15028.github.io/microcomputerlab-01/" />
 <meta property="og:image" content="https://Nick15028.github.io/logo.png"/>
@@ -16,7 +19,10 @@
 <meta name="twitter:image" content="https://Nick15028.github.io/logo.png"/>
 
 <meta name="twitter:title" content="微算機概論實習-01"/>
-<meta name="twitter:description" content="1 組合語言(Assembly Language)是甚麼？  一種電腦語言 所有中高階語言(C、JAVA、BASIC&hellip;)之程式，都須經由 組合語言 轉變成執行檔  2 開發環境 硬體只需與80x86相容的機器都可以. 軟體 作業系統：DOS 組譯器：MASM6.15 連結器：使用MASM6.15內附的LINK&gt;EXE 文書處理器：附檔名為 *.asm  3 範例 印出一行文字印出 Hi, I learn assembly. C:\Masm615&gt;TEST.EXEHi, I learn assembly..model small.datames	db	&#34;Hi, I learn assembly.$&#34;.stack.codemain procmov ax,@datamov ds,axmov dx,offset mesmov ah,09hint 21h	mov ax,4c00hint 21hmain endpend main4 作業 換行 印出自己的學號 使用特殊符號包圍住  C:\Masm615&gt;LAB1."/>
+<meta name="twitter:description" content="1 組合語言(Assembly Language)是甚麼？  一種電腦語言 所有中高階語言(C、JAVA、BASIC&hellip;)之程式，都須經由 組合語言 轉變成執行檔  2 開發環境 硬體只需與80x86相容的機器都可以. 軟體 作業系統：DOS 組譯器：MASM6.15 連結器：使用MASM6.15內附的LINK&gt;EXE 文書處理器：附檔名為 *.asm  3 組義和連結方法 進行組譯
+C:\Masm615&gt;ml.Ta Hello.asm使用鏈結產生EXE檔
+C:\Masm615&gt;link Hello.obj最後開啟執行檔測試
+C:\Masm615&gt;HELLO.EXE4 範例 印出一行文字印出 Hi, I learn assembly. C:\Masm615&gt;TEST.EXEHi, I learn assembly..model small.datames	db	&#34;Hi, I learn assembly.$&#34;.stack.codemain procmov ax,@datamov ds,axmov dx,offset mesmov ah,09hint 21h	mov ax,4c00hint 21hmain endpend main5 作業 換行 印出自己的學號 使用特殊符號包圍住  C:\Masm615&gt;LAB1."/>
 <meta name="application-name" content="NICK">
 <meta name="apple-mobile-web-app-title" content="NICK"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -34,7 +40,7 @@
                 "url": "https:\/\/Nick15028.github.io\/cover.png",
                 "width":  800 ,
                 "height":  600 
-            },"genre": "posts","keywords": "Notes, NTUST, asm, masm6.15","wordcount":  126 ,
+            },"genre": "posts","keywords": "Notes, NTUST, asm, masm6.15","wordcount":  136 ,
         "url": "https:\/\/Nick15028.github.io\/microcomputerlab-01\/","datePublished": "2021-09-29T20:55:53+08:00","dateModified": "2021-09-29T20:55:53+08:00","publisher": {
                 "@type": "Organization",
                 "name": "xxxx",
@@ -118,7 +124,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">微算機概論實習-01</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Nick</a></span>&nbsp;<span class="post-category">included in <a href="/categories/%E5%BE%AE%E7%AE%97%E6%A9%9F%E6%A6%82%E8%AB%96%E5%AF%A6%E7%BF%92/"><i class="far fa-folder fa-fw"></i>微算機概論實習</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-29">2021-09-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;126 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-29">2021-09-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;136 words&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="true">
                 <div class="details-summary toc-title">
@@ -129,8 +135,9 @@
   <ul>
     <li><a href="#1-assembly-language">1 組合語言(Assembly Language)是甚麼？</a></li>
     <li><a href="#2-">2 開發環境</a></li>
-    <li><a href="#3-">3 範例</a></li>
-    <li><a href="#4-">4 作業</a></li>
+    <li><a href="#3-">3 組義和連結方法</a></li>
+    <li><a href="#4-">4 範例</a></li>
+    <li><a href="#5-">5 作業</a></li>
   </ul>
 </nav></div>
             </div><div class="content" id="content"><h2 id="1-assembly-language">1 組合語言(Assembly Language)是甚麼？</h2>
@@ -160,7 +167,14 @@
 </ul></div>
         </div>
     </div>
-<h2 id="3-">3 範例</h2>
+<h2 id="3-">3 組義和連結方法</h2>
+<p>進行組譯</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">C:<span class="se">\M</span>asm615&gt;ml.Ta Hello.asm
+</code></pre></div><p>使用鏈結產生EXE檔</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">C:<span class="se">\M</span>asm615&gt;link Hello.obj
+</code></pre></div><p>最後開啟執行檔測試</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">C:<span class="se">\M</span>asm615&gt;HELLO.EXE
+</code></pre></div><h2 id="4-">4 範例</h2>
 <div class="details admonition tip open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-lightbulb fa-fw"></i>印出一行文字<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -189,7 +203,7 @@ Hi, I learn assembly.
 	<span class="nf">int</span> <span class="mh">21h</span>
 <span class="nf">main</span> <span class="nv">endp</span>
 <span class="nf">end</span> <span class="nv">main</span>
-</code></pre></div><h2 id="4-">4 作業</h2>
+</code></pre></div><h2 id="5-">5 作業</h2>
 <div class="details admonition tip open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-lightbulb fa-fw"></i>換行<i class="details-icon fas fa-angle-right fa-fw"></i>

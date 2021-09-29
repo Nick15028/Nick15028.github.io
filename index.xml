@@ -11,7 +11,10 @@
     <pubDate>Wed, 29 Sep 2021 20:55:53 &#43;0800</pubDate>
     <author>Author</author>
     <guid>https://Nick15028.github.io/microcomputerlab-01/</guid>
-    <description><![CDATA[1 組合語言(Assembly Language)是甚麼？  一種電腦語言 所有中高階語言(C、JAVA、BASIC&hellip;)之程式，都須經由 組合語言 轉變成執行檔  2 開發環境 硬體只需與80x86相容的機器都可以. 軟體 作業系統：DOS 組譯器：MASM6.15 連結器：使用MASM6.15內附的LINK&gt;EXE 文書處理器：附檔名為 *.asm  3 範例 印出一行文字印出 Hi, I learn assembly. C:\Masm615&gt;TEST.EXEHi, I learn assembly..model small.datames	db	&#34;Hi, I learn assembly.$&#34;.stack.codemain procmov ax,@datamov ds,axmov dx,offset mesmov ah,09hint 21h	mov ax,4c00hint 21hmain endpend main4 作業 換行 印出自己的學號 使用特殊符號包圍住  C:\Masm615&gt;LAB1.]]></description>
+    <description><![CDATA[1 組合語言(Assembly Language)是甚麼？  一種電腦語言 所有中高階語言(C、JAVA、BASIC&hellip;)之程式，都須經由 組合語言 轉變成執行檔  2 開發環境 硬體只需與80x86相容的機器都可以. 軟體 作業系統：DOS 組譯器：MASM6.15 連結器：使用MASM6.15內附的LINK&gt;EXE 文書處理器：附檔名為 *.asm  3 組義和連結方法 進行組譯
+C:\Masm615&gt;ml.Ta Hello.asm使用鏈結產生EXE檔
+C:\Masm615&gt;link Hello.obj最後開啟執行檔測試
+C:\Masm615&gt;HELLO.EXE4 範例 印出一行文字印出 Hi, I learn assembly. C:\Masm615&gt;TEST.EXEHi, I learn assembly..model small.datames	db	&#34;Hi, I learn assembly.$&#34;.stack.codemain procmov ax,@datamov ds,axmov dx,offset mesmov ah,09hint 21h	mov ax,4c00hint 21hmain endpend main5 作業 換行 印出自己的學號 使用特殊符號包圍住  C:\Masm615&gt;LAB1.]]></description>
 </item><item>
     <title>尼克的第一篇博客</title>
     <link>https://Nick15028.github.io/my-first-post/</link>
